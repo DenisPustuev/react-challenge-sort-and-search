@@ -20,6 +20,7 @@ export default class App extends Component {
   }
 
   componentWillMount() {
+    //get users data from json
     getUsers().then((data) => {
       this.setState({
         users: data,

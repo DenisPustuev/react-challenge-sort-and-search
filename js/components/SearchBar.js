@@ -9,7 +9,7 @@ export default class SearchBar extends Component {
   }
 
   onChangeSearch(e) {
-    const filteredUsers = this.props.users.filter((user) => {
+    const filteredUsers = this.props.users.filter((user) => { // filter always from fetched users
       const name = user.name.toLowerCase();
       const searchVal = e.target.value.toLowerCase();
 
@@ -23,7 +23,7 @@ export default class SearchBar extends Component {
   render(){
     return (
       <div className="form-group searchbar">
-        <input type="text" className="form-control" value={this.props.searchVal} placeholder="Search people by name" onChange={this.onChangeSearch}/>
+        <input type="text" className="form-control" placeholder="Search people by name" onChange={this.onChangeSearch}/>
       </div>
     );
   }
