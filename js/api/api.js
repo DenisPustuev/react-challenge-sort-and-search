@@ -4,7 +4,7 @@ export const getUsers = () => {
   return new Promise((resolve, reject) => {
     $.ajax({
       type: 'GET',
-      url: '/data.json',
+      url: '/react-challenge-sort-and-search/data.json',
       dataType: 'json',
       success: function (data) {
         resolve(data)
