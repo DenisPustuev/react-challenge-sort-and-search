@@ -37,6 +37,8 @@
     "webpack-stream": "^3.1.0"
   },
   "dependencies": {
+    "jquery": "^3.2.1",
+    "prop-types": "^15.5.10",
     "react": "^0.14.7",
     "react-dom": "^0.14.7"
   }
