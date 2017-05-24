@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 import UserData from './UserData';
 
 export default class UsersList extends Component {
+  //updating component dom only if active user has changed
+  shouldComponentUpdate(newProps) {
+    return this.props.filteredUsers !== newProps.filteredUsers;
+  }
 
   render(){
 
@@ -34,5 +38,6 @@ export default class UsersList extends Component {
 }
 
 UsersList.propTypes = {
-  users: PropTypes.array.isRequired
+  users: PropTypes.array.isRequired,
+  filteredUsers: PropTypes.array.isRequired
 };

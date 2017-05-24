@@ -6,6 +6,12 @@ import ToolBar from './ToolBar'
 import ActiveUser from './ActiveUser'
 
 export default class Sidebar extends Component {
+
+  //updating component dom only if active user has changed
+  shouldComponentUpdate(newProps) {
+    return this.props.activeUser !== newProps.activeUser;
+  }
+
   render() {
     const {activeUser, isActiveUser, onSearch, searchVal, onSortUsers, users, filteredUsers, setActiveUser} = this.props;
     return (
